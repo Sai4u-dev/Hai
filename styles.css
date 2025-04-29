@@ -1,35 +1,59 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  height: 100vh;
+  background: #000;
   color: white;
   overflow: hidden;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* Starry Background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
+  z-index: 1;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
   padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .headline {
   font-size: 3rem;
   font-weight: bold;
-  animation: fadeInDown 1.5s ease-in-out;
-}
-
-.cursor {
-  display: inline-block;
-  animation: blink 1s infinite;
-  color: #00ffcc;
+  animation: slideIn 1s ease-out;
 }
 
 .subtext {
@@ -54,7 +78,17 @@ body {
   transform: scale(1.1);
 }
 
-@keyframes fadeInDown {
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
   from {
     transform: translateY(-50px);
     opacity: 0;
@@ -65,25 +99,7 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .headline {
     font-size: 2rem;
