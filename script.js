@@ -1,5 +1,6 @@
+// script.js
 const text = "Hai, Techies! Welcome to My Verse";
-const typedText = document.getElementById("typed-text");
+const typedText = document.querySelector(".headline");
 let index = 0;
 
 function type() {
