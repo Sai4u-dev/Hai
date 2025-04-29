@@ -6,11 +6,11 @@ A fully responsive, animated, and immersive landing page built with **HTML**, **
 
 ## 🚀 Live Demo
 
-> 🔗 [Add Your Live Demo URL Here]
+> 🔗 [https://sai4u-dev.github.io/Hai/]
 
 ---
 
-![screenshot](preview.png) <!-- Replace with actual screenshot if available -->
+![screenshot](techqi.png) <!-- Replace with actual screenshot if available -->
 
 ---
 
